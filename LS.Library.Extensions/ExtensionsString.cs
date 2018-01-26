@@ -28,5 +28,18 @@ namespace LS.Library.Extensions
         {
             return string.IsNullOrWhiteSpace(s);
         }
+
+        /// <summary>
+        /// 检查是否包含某个字符
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="toCheck">要比较的字符串</param>
+        /// <param name="comp">比较的类型</param>
+        public static bool Contains(this string source, string toCheck, StringComparison comp)
+        {
+            return source.IndexOf(toCheck, comp) >= 0;
+        }
+
+
     }
 }
