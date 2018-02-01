@@ -41,5 +41,16 @@ namespace LS.Library.Extensions
         }
 
 
+        /// <summary>
+        /// 获取拼音码
+        /// </summary>
+        /// <param name="chinese">要获取拼音码的汉字</param>
+        /// <param name="type">获取拼音码的类型,默认为拼音全码</param>
+        /// <returns></returns>
+        public static string GetChineseCode(this string chinese, Enums.ChineseCharacterConvertType type = Enums.ChineseCharacterConvertType.FullCodeToUpper)
+        {
+            return ChineseCharactersHelper.ChineseToCharacters(chinese, type);
+        }
+
     }
 }

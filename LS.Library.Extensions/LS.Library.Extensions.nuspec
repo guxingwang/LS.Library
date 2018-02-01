@@ -6,10 +6,11 @@
     <title>$title$</title>
     <authors>$author$</authors>
     <owners>$author$</owners>
-    <licenseUrl>https://github.com/guxingwang/LS.Library/blob/master/LICENSE</licenseUrl>
-    <projectUrl>https://github.com/guxingwang/LS.Library</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
     <copyright>Copyright 2018</copyright>
+    <references>
+      <reference file="ChnCharInfo.dll" />
+    </references>
   </metadata>
 </package>
