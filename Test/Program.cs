@@ -19,7 +19,7 @@ namespace Test
             {
                 //运行的次数
                 sw.Restart();
-                for (int i = 0; i < 30000; i++)
+                for (int i = 0; i < 10000; i++)
                 {
                     //每次时间间隔的运行次数
                     ss.GetChineseCode();

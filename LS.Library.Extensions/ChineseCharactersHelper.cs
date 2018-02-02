@@ -69,15 +69,7 @@ namespace LS.Library.Extensions
 
                 if (pyString.IsNotEmpty())
                 {
-                    if (type == Enums.ChineseCharacterConvertType.FullCodeToUpper)
-                    {
-                        pyString = pyString.ToUpper();
-                    }
-                    else if (type == Enums.ChineseCharacterConvertType.ShortCodeToUpper)
-                    {
-                        pyString = pyString.Substring(0, 1);
-                    }
-                    else if (type == Enums.ChineseCharacterConvertType.FullCodeToLower)
+                    if (type == Enums.ChineseCharacterConvertType.FullCodeToLower)
                     {
                         pyString = pyString.ToLower();
                     }
@@ -85,7 +77,14 @@ namespace LS.Library.Extensions
                     {
                         pyString = pyString.Substring(0, 1).ToLower();
                     }
-
+                    else if (type == Enums.ChineseCharacterConvertType.FullCodeToUpper)
+                    {
+                        pyString = pyString.ToUpper();
+                    }
+                    else if (type == Enums.ChineseCharacterConvertType.ShortCodeToUpper)
+                    {
+                        pyString = pyString.Substring(0, 1);
+                    }
                 }
                 #endregion
 
@@ -219,7 +218,7 @@ namespace LS.Library.Extensions
             if (chineseString.IsNotEmpty())
             {
                 StringBuilder sb = new StringBuilder();
-                
+
                 char[] arrChineseSingle = chineseString.Trim().ToCharArray();
 
                 bool isFirst = true;//定义是否为第一个要转换的字符
@@ -242,7 +241,7 @@ namespace LS.Library.Extensions
 
                     sb.Append(ConvertSingleChineseToPinYin(item.ToString(), type));
                 }
-               return sb.ToString();
+                return sb.ToString();
             }
 
             return string.Empty;
@@ -252,6 +251,6 @@ namespace LS.Library.Extensions
 
         #endregion
 
-        
+
     }
 }

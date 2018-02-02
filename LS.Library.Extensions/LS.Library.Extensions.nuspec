@@ -9,8 +9,5 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
     <copyright>Copyright 2018</copyright>
-    <references>
-      <reference file="ChnCharInfo.dll" />
-    </references>
   </metadata>
 </package>
